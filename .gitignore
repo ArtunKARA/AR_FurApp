@@ -61,6 +61,9 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+#aset folder
+NextGen Furniture Pack/*
+
 # Crashlytics generated file
 crashlytics-build.properties
 
