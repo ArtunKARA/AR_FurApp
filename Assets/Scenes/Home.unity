@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123869301}
-  - component: {fileID: 123869300}
+  - component: {fileID: 123869302}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -140,18 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &123869300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123869299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3b46027f88d8af4a97e9bda5454b419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &123869301
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +155,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &123869302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123869299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634277494d427774391c08468fe2dc65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &244255403
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,8 +625,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 123869300}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 123869302}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
         m_MethodName: ARSceneloader
         m_Mode: 1
         m_Arguments:
@@ -1611,8 +1611,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 123869300}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 123869302}
+        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
         m_MethodName: QuitApp
         m_Mode: 1
         m_Arguments:

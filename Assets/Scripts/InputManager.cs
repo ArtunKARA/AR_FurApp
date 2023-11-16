@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using Lean.Touch;
 
 public class InputManager : MonoBehaviour
 {
@@ -16,13 +17,10 @@ public class InputManager : MonoBehaviour
 
     private Touch touch;
     private Pose pose;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         CrosshairCalculation();
@@ -32,7 +30,7 @@ public class InputManager : MonoBehaviour
             return;
         }
         if(IsPointerOverUI(touch)) return;
-        
+
 
         // Ray ray = arCam.ScreenPointToRay(touch.position);
         // if(_raycastManager.Raycast(ray,_hits))
@@ -40,7 +38,11 @@ public class InputManager : MonoBehaviour
         //     Pose pose = _hits[0].pose;
         //     Instantiate(DataHandler.Instance.furniture,pose.position, pose.rotation);
         // }
-        Instantiate(DataHandler.Instance.GetFurniture(),pose.position, pose.rotation);
+        GameObject newObject = Instantiate(DataHandler.Instance.GetFurniture(),pose.position, pose.rotation);
+
+        newObject.AddComponent<LeanPinchScale>();
+        newObject.AddComponent<LeanTwistRotate>();
+
 
     }
 
