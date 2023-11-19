@@ -12,12 +12,17 @@ public class ButtonScript : MonoBehaviour
 
     public void ARSceneloader(){
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("FurAdd");
 }
     public void Loader(){
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Home");
 }
+    public void ProductPage()
+    {
+        SceneManager.LoadScene("UrunSayfa");
+    }
     
+
     public void QuitApp(){ 
         Application.Quit();
 

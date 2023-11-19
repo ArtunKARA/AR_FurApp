@@ -5,6 +5,8 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using Lean.Touch;
+using System.IO.Compression;
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] private ARRaycastManager _raycastManager;
     [SerializeField] private GameObject crosshair;
     private List<ARRaycastHit> _hits = new List<ARRaycastHit>();
+
+    public Text buttonText;
 
     private Touch touch;
     private Pose pose;
@@ -38,10 +42,12 @@ public class InputManager : MonoBehaviour
         //     Pose pose = _hits[0].pose;
         //     Instantiate(DataHandler.Instance.furniture,pose.position, pose.rotation);
         // }
+        if(buttonText.text== "Enable Plane Detection and Show Existing")
+        {
         GameObject newObject = Instantiate(DataHandler.Instance.GetFurniture(),pose.position, pose.rotation);
+           
 
-        newObject.AddComponent<LeanPinchScale>();
-        newObject.AddComponent<LeanTwistRotate>();
+        }
 
 
     }
